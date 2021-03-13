@@ -1,0 +1,62 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path" : "pages/home/home",
+			"style" :                                                                                    
+			{
+				"navigationBarTitleText": "校招SSP",
+				"enablePullDownRefresh": false
+			}
+			
+		},
+		{
+			"path": "pages/me/me",
+			"style": {
+				"navigationBarTitleText": "校招SSP"
+			}
+		},
+		{
+			"path": "pages/discovery/discovery",
+			"style": {
+				"navigationBarTitleText": "校招SSP"
+			}
+		}
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "校招SSP",
+		"navigationBarBackgroundColor": "#5f86f2",
+		"backgroundColor": "#F8F8F8"
+	},
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			"tui-(.*)": "@/components/thorui/tui-$1/tui-$1.vue",
+			"^esc-(.*)": "@/components/third-components/esc-ui/components/esc-$1/index.vue"
+		}
+	},
+	"tabBar": {
+		"color": "#333333",
+		"selectedColor":"#5f86f2",
+		"list": [
+			{
+				"text": "首页",
+				"pagePath":"pages/home/home",
+				"iconPath":"static/home.png",
+				"selectedIconPath":"static/home-active.png"
+			},
+			{
+				"text": "发现",
+				"pagePath":"pages/discovery/discovery",
+				"iconPath":"static/discovery.png",
+				"selectedIconPath":"static/discovery-active.png"
+			},
+			{
+				"text": "我的",
+				"pagePath":"pages/me/me",
+				"iconPath":"static/me.png",
+				"selectedIconPath":"static/me-active.png"
+			}
+		]
+	}
+}
