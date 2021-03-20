@@ -67,7 +67,10 @@
 				this.currentTab = event.index
 			},
 			clickCard(value) {
-				console.log("点击卡片", value.index, "该做跳转了");
+				const job = this.infos[value.index]
+				uni.navigateTo({
+					url:"/pages/job-detail/job-detail?uuid="+job.uuid,
+				})
 			}
 		},
 		computed:{

@@ -65,7 +65,7 @@ export const myRequest = (options) => {
   ![image-20210312222115019](https://gitee.com/xinwuyun/myimage/raw/master/img/image-20210312222115019.png)
 
   + 图片中的信息与接口信息对应不上
-  + 换行符”\n“怎么识别是个问题，不过在这之前，如何获取内容？
+  + `\n`的处理方法：`.replace('/\\n/','\n')`
 
 ## 测试接口使用的图片
 

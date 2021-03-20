@@ -66,6 +66,10 @@
 				this.currentTab = event.index
 			},
 			clickCard(value) {
+				const nt = this.infos[value.index]
+				uni.navigateTo({
+					url:"/pages/nt-detail/nt-detail?uuid="+nt.uuid,
+				})
 				console.log("点击卡片", value.index, "该做跳转了");
 			}
 		},
