@@ -125,7 +125,7 @@
 .vline {
 	width: 1rpx;
 	height: 100%;
-	border: solid 1rpx #000000;
+	background-color: #000000;
 }
 
 .foot-left,
