@@ -39,6 +39,24 @@
             }
             
         }
+        ,{
+            "path" : "components/write-nt/write-nt",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "发布内推",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/write-nt/write-nt",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "发布内推",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",

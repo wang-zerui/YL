@@ -25,6 +25,9 @@
 			{{item.inserttime}}
 			</job-card>
 		</view>
+		<view class="write-button" @click="clickWriteButton">
+			<image :src="writeButtonUrl"></image>
+		</view>
 	</view>
 </template>
 
@@ -38,8 +41,8 @@
 					{name:"最新"},
 					{name:"热门"},
 				],
-				//info用于组件card测试
-				infos: []
+				infos: [],
+				writeButtonUrl: "../../static/write.png"
 			};
 		},
 		methods:{
@@ -70,7 +73,11 @@
 				uni.navigateTo({
 					url:"/pages/nt-detail/nt-detail?uuid="+nt.uuid,
 				})
-				console.log("点击卡片", value.index, "该做跳转了");
+			},
+			clickWriteButton() {
+				uni.navigateTo({
+					url:"/pages/write-nt/write-nt",
+				})
 			}
 		},
 		computed:{
@@ -100,5 +107,26 @@
 		align-items: flex-end;
 		border-bottom: solid 1rpx;
 		height: 65rpx;
+	}
+	.write-button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: fixed;
+		right: 66rpx;
+		bottom: 160rpx;
+		width: 100rpx;
+		height: 100rpx;
+		padding: 0 0;
+		border-radius: 50rpx;
+		background-color: #5f86f2;
+		box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1);
+	}
+	.write-button image{
+		position: relative;
+		left: 6rpx;
+		bottom: 2rpx;
+		width: 70rpx;
+		height: 67rpx;
 	}
 </style>

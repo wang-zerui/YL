@@ -66,6 +66,47 @@ export const myRequest = (options) => {
 
   + 图片中的信息与接口信息对应不上
   + `\n`的处理方法：`.replace('/\\n/','\n')`
+  
++ 发布内推页面
+
+  + 标题和内容最大长度是多少？
+
+  + 图片如何传给后端？接口文档写的是string
+
+  + 图片上传方式
+
+  + 城市是否弹出城市选择器
+
+  + 返回确认实现代码（`uni`竟然是异步操作，因为没办法实现同步操作，所以按如下方式写）
+
+    ```js
+    onBackPress(options) {
+    			if(options.from == "navigateBack"){
+    				return false;
+    			}else{
+    				uni.showModal({
+    				    title: '提示',
+    				    content: '这是一个模态弹窗',
+    				    success: function (res) {
+    				        if (res.confirm) {
+    				            // console.log('用户点击确定');
+    										uni.navigateBack({
+    											
+    										})
+    				        } else if (res.cancel) {
+    				            // console.log('用户点击取消');
+    										return true;
+    				        }
+    				    }
+    				});
+    				return true;
+    			}
+    		},
+    ```
+
+    
+
+  + https://ask.dcloud.net.cn/article/35120
 
 ## 测试接口使用的图片
 
